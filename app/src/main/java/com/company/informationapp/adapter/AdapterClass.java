@@ -1,6 +1,7 @@
 package com.company.informationapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,8 +9,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.company.informationapp.CountriesActivity;
+import com.company.informationapp.MainActivity;
+import com.company.informationapp.MusiciansActivity;
+import com.company.informationapp.PlanetsActivity;
+import com.company.informationapp.PresidentsActivity;
 import com.company.informationapp.R;
 import com.company.informationapp.model.ModelClass;
 
@@ -42,6 +49,29 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.CardViewHold
                         "drawable",
                         context.getPackageName())
         );
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (position == 0){
+                    Intent intent = new Intent(context, PlanetsActivity.class);
+                    context.startActivity(intent);
+                }
+                if (position == 1){
+                    Intent intent = new Intent(context, MusiciansActivity.class);
+                    context.startActivity(intent);
+                }
+                if (position == 2){
+                    Intent intent = new Intent(context, PresidentsActivity.class);
+                    context.startActivity(intent);
+                }
+                if (position == 3){
+                    Intent intent = new Intent(context, CountriesActivity.class);
+                    context.startActivity(intent);
+                }
+
+            }
+        });
     }
 
     @Override
@@ -49,16 +79,18 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.CardViewHold
         return modelList.size();
     }
 
-    public class CardViewHolder extends RecyclerView.ViewHolder {
+    public static class CardViewHolder extends RecyclerView.ViewHolder {
 
         private final ImageView imageViewSplash;
         private final TextView textViewSplash;
+        private CardView cardView;
 
         public CardViewHolder(@NonNull View itemView) {
             super(itemView);
 
             imageViewSplash = itemView.findViewById(R.id.imageViewSplash);
             textViewSplash = itemView.findViewById(R.id.textViewSplash);
+            cardView = itemView.findViewById(R.id.cardView);
         }
     }
 }
