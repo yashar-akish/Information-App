@@ -50,7 +50,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="7dp"
                 android:padding="5dp"
-                android:text="TextView"
+                android:text="@string/united_kingdom"
                 android:textAlignment="viewStart"
                 android:textColor="@color/black"
                 android:textSize="18sp"
