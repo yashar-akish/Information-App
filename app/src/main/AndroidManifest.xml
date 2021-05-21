@@ -15,7 +15,8 @@
         <activity android:name=".activities.PresidentsActivity" />
         <activity android:name=".activities.MusiciansActivity" />
         <activity android:name=".activities.PlanetsActivity" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.MainActivity"
+            android:theme="@style/MyTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
