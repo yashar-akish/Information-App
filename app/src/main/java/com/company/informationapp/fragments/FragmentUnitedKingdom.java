@@ -1,6 +1,5 @@
 package com.company.informationapp.fragments;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +9,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import com.company.informationapp.R;
 import com.squareup.picasso.Callback;
@@ -44,5 +44,9 @@ public class FragmentUnitedKingdom extends Fragment {
                 });
 
         return view;
+    }
+
+    public static FragmentUnitedKingdom newInstance(){
+        return new FragmentUnitedKingdom();
     }
 }
