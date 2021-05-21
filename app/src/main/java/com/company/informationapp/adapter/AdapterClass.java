@@ -12,11 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.company.informationapp.CountriesActivity;
-import com.company.informationapp.MainActivity;
-import com.company.informationapp.MusiciansActivity;
-import com.company.informationapp.PlanetsActivity;
-import com.company.informationapp.PresidentsActivity;
+import com.company.informationapp.activities.CountriesActivity;
+import com.company.informationapp.activities.MusiciansActivity;
+import com.company.informationapp.activities.PlanetsActivity;
+import com.company.informationapp.activities.PresidentsActivity;
 import com.company.informationapp.R;
 import com.company.informationapp.model.ModelClass;
 

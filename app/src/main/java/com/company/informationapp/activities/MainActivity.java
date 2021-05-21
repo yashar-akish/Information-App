@@ -1,4 +1,4 @@
-package com.company.informationapp;
+package com.company.informationapp.activities;
 
 import android.os.Bundle;
 
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.company.informationapp.R;
 import com.company.informationapp.adapter.AdapterClass;
 import com.company.informationapp.model.ModelClass;
 

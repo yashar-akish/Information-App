@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.InformationApp">
-        <activity android:name=".CountriesActivity"></activity>
-        <activity android:name=".PresidentsActivity" />
-        <activity android:name=".MusiciansActivity" />
-        <activity android:name=".PlanetsActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.CountriesActivity"></activity>
+        <activity android:name=".activities.PresidentsActivity" />
+        <activity android:name=".activities.MusiciansActivity" />
+        <activity android:name=".activities.PlanetsActivity" />
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
