@@ -28,7 +28,10 @@ public class FragmentUnitedKingdom extends Fragment {
         imageViewUnitedKingdom = view.findViewById(R.id.imageViewUnitedKingdom);
         progressBarUnitedKingdom = view.findViewById(R.id.progressBarUnitedKingdom);
 
-        Picasso.get().load("https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1920px-Flag_of_the_United_Kingdom.svg.png")
+        String imageUri = "https://www.nationsencyclopedia.com/photos/united-kingdom-1125.jpg";
+        //"https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1920px-Flag_of_the_United_Kingdom.svg.png";
+                //
+        Picasso.get().load(imageUri)
                         .into(imageViewUnitedKingdom, new Callback(){
 
                     @Override
