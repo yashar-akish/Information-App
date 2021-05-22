@@ -13,22 +13,22 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 public class CountriesActivity extends AppCompatActivity {
 
-    private TabLayout tabLayoutUnitedKingdom;
-    private ViewPager2 viewPagerUnitedKingdom;
+    private TabLayout tabLayoutCountries;
+    private ViewPager2 viewPagerCountries;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_countries);
 
-        tabLayoutUnitedKingdom = findViewById(R.id.tabLayoutUnitedKingdom);
-        viewPagerUnitedKingdom = findViewById(R.id.viewPagerUnitedKingdom);
+        tabLayoutCountries = findViewById(R.id.tabLayoutUnitedKingdom);
+        viewPagerCountries = findViewById(R.id.viewPagerUnitedKingdom);
 
         ViewPagerAdapterCountries adapter = new ViewPagerAdapterCountries(getSupportFragmentManager(), getLifecycle());
 
-        viewPagerUnitedKingdom.setAdapter(adapter);
+        viewPagerCountries.setAdapter(adapter);
 
-        TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayoutUnitedKingdom, viewPagerUnitedKingdom
+        TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayoutCountries, viewPagerCountries
                 , true, true, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
@@ -36,6 +36,9 @@ public class CountriesActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         tab.setText("United Kingdom");
+                        break;
+                    case 1:
+                        tab.setText("France");
                         break;
                 }
             }
